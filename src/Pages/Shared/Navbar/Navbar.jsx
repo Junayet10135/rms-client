@@ -4,7 +4,7 @@ const Navbar = () => {
     const navList = <>
         <li><Link to="/">HOME</Link></li>
         <li><Link to="/menu">OUR MENU</Link></li>
-        <li><a>Item 3</a></li>
+        <li><Link to="/order">FOOD ORDER</Link></li>
     </>
     return (
         <div className="navbar fixed z-10 bg-opacity-30 bg-black text-white max-w-screen-xl mx-auto">
