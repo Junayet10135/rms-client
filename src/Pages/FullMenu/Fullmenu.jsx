@@ -4,6 +4,10 @@ import CoverMenu from '../../assets/menu/banner3.jpg'
 import useMenu from '../../hooks/useMenu';
 import SectionTitle from '../Components/SectionTitle';
 import MenuTypes from './MenuTypes';
+import soupImg from '../../assets/menu/soup-bg.jpg'
+import saladImg from '../../assets/menu/salad-bg.jpg'
+import pizzaImg from '../../assets/menu/pizza-bg.jpg'
+import dessertImg from '../../assets/menu/dessert-bg.jpeg'
 const Fullmenu = () => {
     const [menu] = useMenu();
     const desserts = menu.filter(item => item.category === 'dessert');
@@ -19,6 +23,10 @@ const Fullmenu = () => {
             <Cover img={CoverMenu} title="Our Menu"></Cover>
             <SectionTitle subHeading="Don't Miss" heading="Today's Offer"></SectionTitle>
             <MenuTypes items={offered}></MenuTypes>
+            <MenuTypes items={desserts} title="dessert" img={dessertImg}></MenuTypes>
+            <MenuTypes items={pizza} title={"pizza"} img={pizzaImg}></MenuTypes>
+            <MenuTypes items={salad} title={"salad"} img={saladImg}></MenuTypes>
+            <MenuTypes items={soup} title={"soup"} img={soupImg}></MenuTypes>
         </div>
     );
 };
