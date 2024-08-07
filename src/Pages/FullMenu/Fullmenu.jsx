@@ -1,11 +1,14 @@
 import { Helmet } from 'react-helmet-async';
+import Cover from '../Shared/Cover/Cover';
+import CoverMenu from '../../assets/menu/banner3.jpg'
 const Fullmenu = () => {
     return (
         <div>
             <Helmet>
                 <title>Full Menu</title>
             </Helmet>
-            <h2>Full menu here</h2>
+            <Cover img={CoverMenu} title="Our Menu"></Cover>
+
         </div>
     );
 };
