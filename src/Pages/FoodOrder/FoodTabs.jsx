@@ -1,5 +1,6 @@
 import Card from "../Components/Card";
 
+
 const FoodTabs = ({ items }) => {
     return (
         <div className='grid md:grid-cols-3 gap-10' >
