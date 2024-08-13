@@ -63,7 +63,7 @@ const Navbar = () => {
                     </>
                 }
                 <li>
-                    <Link to="/">
+                    <Link to="/dashboard/cart">
                         <button className="btn btn-ghost">
                             <BsCart2 className="mr-2" />
                             <div className="badge badge-secondary">+{cart.length}</div>
