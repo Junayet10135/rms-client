@@ -18,16 +18,16 @@ const Dashboard = () => {
                 <h2 className="text-white uppercase text-center p-4">Minimalist Cafe</h2>
                 <ul className="menu p-4">
                     {
-                        isAdmin ? <div>
+                        isAdmin ? <>
                             <li> <NavLink to="/dashboard/adminHome"> <FaHome /> ADMIN HOME</NavLink></li>
                             <li> <NavLink to="/dashboard/addItem"> <FaUtensils /> ADD ITEMS</NavLink></li>
                             <li> <NavLink to="/dashboard/manageItem"> <FaList /> MANAGE ITEMS</NavLink></li>
                             <li> <NavLink to="/dashboard/manageBooking"> <FaBook /> MANAGE BOOKINGS</NavLink></li>
                             <li> <NavLink to="/dashboard/allUsers"> < FaUsers /> ALL USERS</NavLink></li>
 
-                        </div>
+                        </>
                             :
-                            <div>
+                            <>
                                 <li> <NavLink to="/dashboard/userHome"> <FaHome /> USER HOME</NavLink></li>
                                 <li> <NavLink to="/dashboard/reservation"> <FaCalendarAlt /> RESERVATION</NavLink></li>
                                 <li> <NavLink to="/dashboard/paymentHistory"> <GiWallet /> PAYMENT HISTORY</NavLink></li>
@@ -35,7 +35,7 @@ const Dashboard = () => {
                                 <li> <NavLink to="/dashboard/addReview"> <MdOutlineRateReview /> ADD REVIEW</NavLink></li>
                                 <li> <NavLink to="/dashboard/myBookings"> <FaListUl /> MY BOOKINGS</NavLink></li>
 
-                            </div>
+                            </>
                     }
                     {/* shared nav links */}
 
