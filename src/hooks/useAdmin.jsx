@@ -3,13 +3,13 @@ import useAuth from "./useAuth";
 import useAxiousSecure from "./useAxiousSecure";
 
 const useAdmin = () => {
-    const { user } = useAuth();
+    const { user, loading } = useAuth();
     const axiosSecure = useAxiousSecure();
     const { data: isAdmin, isPending: isAdminLoading } = useQuery({
         queryKey: [user?.email, 'isAdmin'],
+        enabled: !loading,
         queryFn: async () => {
             const res = await axiosSecure.get(`/users/admin/${user.email}`);
-            console.log(res.data);
             return res.data?.admin;
         }
     })
