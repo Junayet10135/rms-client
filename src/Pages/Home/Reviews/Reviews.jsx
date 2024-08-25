@@ -4,6 +4,14 @@ import { useEffect, useState } from "react";
 import '@smastrom/react-rating/style.css'
 import { Rating } from "@smastrom/react-rating";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper/modules";
+
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
 
@@ -13,14 +21,16 @@ const Reviews = () => {
             .then(data => setReviews(data))
     }, [])
     return (
-        <section className="my-20">
+        <section className="my-20" >
             <SectionTitle
                 subHeading="What Our Client Say"
                 heading={'Reviews'}
             ></SectionTitle>
-            <div>
+
+            <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+
                 {
-                    reviews.map(review => <div
+                    reviews.map(review => <SwiperSlide
                         key={review._id}
                     >
                         <div className="flex flex-col items-center mx-24 my-16">
@@ -32,13 +42,10 @@ const Reviews = () => {
                             <p className="py-8">{review.details}</p>
                             <h3 className="text-2xl text-orange-400">{review.name}</h3>
                         </div>
-                    </div>)
+                    </SwiperSlide>)
                 }
-
-
-            </div>
-
-        </section>
+            </Swiper>
+        </section >
     );
 };
 

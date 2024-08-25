@@ -8,7 +8,6 @@ import Fullmenu from "../Pages/FullMenu/Fullmenu";
 import FoodOrder from "../Pages/FoodOrder/FoodOrder";
 import LogIn from "../Pages/LOGIN/LogIn";
 import SignUp from "../Pages/LOGIN/SignUp";
-import Secret from "../Pages/secret/Secret";
 import PrivateRoutes from "./PrivateRoutes";
 import Dashboard from "../Layout/Dashboard";
 import Cart from "../Pages/Dashboard/Cart";
@@ -21,6 +20,11 @@ import Payment from "../Pages/Dashboard/Payment";
 import PaymentHistory from "../Pages/Dashboard/PaymentHistory";
 import AdminHome from "../Pages/Dashboard/AdminHome";
 import UserHome from "../Pages/Dashboard/UserHome";
+import ContactUs from "../Pages/Contact/ContactUs";
+import AddReview from "../Pages/Dashboard/AddReview";
+import Reservation from "../Pages/Dashboard/Reservation";
+import MyBookings from "../Pages/Dashboard/MyBookings";
+import ManageBooking from "../Pages/Dashboard/ManageBooking";
 
 
 export const router = createBrowserRouter([
@@ -49,8 +53,8 @@ export const router = createBrowserRouter([
                 element: <SignUp></SignUp>
             },
             {
-                path: 'secret',
-                element: <PrivateRoutes><Secret></Secret></PrivateRoutes>
+                path: 'contact',
+                element: <ContactUs></ContactUs>
             },
         ]
     },
@@ -74,6 +78,18 @@ export const router = createBrowserRouter([
                 path: 'paymentHistory',
                 element: <PaymentHistory></PaymentHistory>
             },
+            {
+                path: 'addReview',
+                element: <AddReview></AddReview>
+            },
+            {
+                path: 'reservation',
+                element: <Reservation></Reservation>
+            },
+            {
+                path: 'myBookings',
+                element: <MyBookings></MyBookings>
+            },
 
             // for admin
 
@@ -92,6 +108,10 @@ export const router = createBrowserRouter([
             {
                 path: 'manageItem',
                 element: <AdminRoute><ManageItems></ManageItems></AdminRoute>
+            },
+            {
+                path: 'manageBooking',
+                element: <AdminRoute><ManageBooking></ManageBooking></AdminRoute>
             },
             {
                 path: 'updateItem/:id',
