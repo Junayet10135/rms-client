@@ -1,19 +1,11 @@
 import SectionTitle from '../../Components/SectionTitle';
 import Menu from '../../Shared/Items/Menu';
 import useMenu from '../../../hooks/useMenu';
+import { Link } from 'react-router-dom';
 
 const BestSell = () => {
     const [menu] = useMenu();
     const popular = menu.filter(item => item.category === 'popular');
-    // const [menu, setMenu] = useState([]);
-    // useEffect(() => {
-    //     fetch('menu.json')
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             const popularItems = data.filter(item => item.category === 'popular');
-    //             setMenu(popularItems)
-    //         })
-    // }, [])
     return (
         <section className="mb-12">
             <SectionTitle
@@ -28,7 +20,7 @@ const BestSell = () => {
                     ></Menu>)
                 }
             </div>
-            <button className="btn btn-outline border-0 border-b-4 mt-4">View Full Menu</button>
+            <Link className='btn btn-outline border-0 border-b-4 mt-4' to='/menu'>View Full Menu</Link>
         </section>
     );
 };

@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 import SectionTitle from '../../Components/SectionTitle';
 import ChefMenu from './ChefMenu';
+import { Link } from 'react-router-dom';
 
 
 const ChefChoice = () => {
     const [menu, setMenu] = useState([]);
     useEffect(() => {
-        fetch('menu.json')
+        fetch('http://localhost:5000/menu')
             .then(res => res.json())
             .then(data => {
                 const popularItems = data.filter(item => item.category === 'popular');
@@ -27,7 +28,8 @@ const ChefChoice = () => {
                     ></ChefMenu>)
                 }
             </div>
-            <button className="btn btn-outline border-0 border-b-4 mt-4">View Full Menu</button>
+            <Link className='btn btn-outline border-0 border-b-4 mt-4' to='/menu'>View Full Menu</Link>
+
         </section>
     );
 };

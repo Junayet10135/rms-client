@@ -3,10 +3,10 @@ import { Carousel } from 'react-responsive-carousel';
 
 import si1 from '../../assets/home/01.jpg'
 import si2 from '../../assets/home/02.jpg'
-import si3 from '../../assets/home/03.png'
+import si3 from '../../assets/home/03.jpg'
 import si4 from '../../assets/home/04.jpg'
-import si5 from '../../assets/home/05.png'
-import si6 from '../../assets/home/06.png'
+import si5 from '../../assets/home/05.jpg'
+import si6 from '../../assets/home/06.jpg'
 
 const Banner = () => {
     return (
