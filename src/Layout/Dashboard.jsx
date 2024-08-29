@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
 import { GiShoppingCart, GiWallet } from "react-icons/gi";
-import { FaBook, FaCalendarAlt, FaEnvelope, FaHome, FaList, FaSearch, FaUsers, FaUtensils } from "react-icons/fa";
+import { FaBook, FaCalendarAlt, FaEnvelope, FaHome, FaList, FaPlus, FaSearch, FaUsers, FaUtensils } from "react-icons/fa";
 import { MdOutlineRateReview } from "react-icons/md";
 import { FaListUl } from "react-icons/fa";
 import useCart from "../hooks/useCart";
@@ -24,6 +24,10 @@ const Dashboard = () => {
                             <li> <NavLink to="/dashboard/manageItem"> <FaList /> MANAGE ITEMS</NavLink></li>
                             <li> <NavLink to="/dashboard/manageBooking"> <FaBook /> MANAGE BOOKINGS</NavLink></li>
                             <li> <NavLink to="/dashboard/allUsers"> < FaUsers /> ALL USERS</NavLink></li>
+                            <li> <NavLink to="/dashboard/stockItem"> < FaPlus /> STOCK ITEM</NavLink></li>
+                            <li> <NavLink to="/dashboard/stockList"> < FaList /> STOCK LIST</NavLink></li>
+                            <li> <NavLink to="/dashboard/wasteItem"> < FaPlus /> WASTE ITEM</NavLink></li>
+                            <li> <NavLink to="/dashboard/wasteList"> < FaList /> WASTE LIST</NavLink></li>
 
                         </>
                             :

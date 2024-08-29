@@ -25,6 +25,10 @@ import AddReview from "../Pages/Dashboard/AddReview";
 import Reservation from "../Pages/Dashboard/Reservation";
 import MyBookings from "../Pages/Dashboard/MyBookings";
 import ManageBooking from "../Pages/Dashboard/ManageBooking";
+import StockItem from "../Pages/Dashboard/StockItem";
+import StockList from "../Pages/Dashboard/StockList";
+import WasteItem from "../Pages/Dashboard/WasteItem";
+import WasteList from "../Pages/Dashboard/WasteList";
 
 
 export const router = createBrowserRouter([
@@ -109,6 +113,23 @@ export const router = createBrowserRouter([
                 path: 'manageItem',
                 element: <AdminRoute><ManageItems></ManageItems></AdminRoute>
             },
+            {
+                path: 'stockItem',
+                element: <AdminRoute><StockItem></StockItem></AdminRoute>
+            },
+            {
+                path: 'stockList',
+                element: <AdminRoute><StockList></StockList></AdminRoute>
+            },
+            {
+                path: 'wasteItem',
+                element: <AdminRoute><WasteItem></WasteItem></AdminRoute>
+            },
+            {
+                path: 'wasteList',
+                element: <AdminRoute><WasteList></WasteList></AdminRoute>
+            },
+
             {
                 path: 'manageBooking',
                 element: <AdminRoute><ManageBooking></ManageBooking></AdminRoute>
