@@ -14,7 +14,7 @@ const Dashboard = () => {
     return (
         <div className="flex">
             {/* Dashboard side bar  */}
-            <div className="w-64 min-h-screen bg-orange-400">
+            <div className="w-64 min-h-screen bg-orange-400 rounded">
                 <h2 className="text-white uppercase text-center p-4">Minimalist Cafe</h2>
                 <ul className="menu p-4">
                     {

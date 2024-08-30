@@ -15,6 +15,13 @@ const UserHome = () => {
             return res.data;
         }
     })
+    const { data: reservation = [] } = useQuery({
+        queryKey: ['reservation', user.email],
+        queryFn: async () => {
+            const res = await axiosSecure.get(`/reservation`)
+            return res.data;
+        }
+    })
     return (
         <div>
 
@@ -35,6 +42,9 @@ const UserHome = () => {
                         </h4>
                         <h4>
                             #  Your Total Transaction: {payments.length}
+                        </h4>
+                        <h4>
+                            #  Your Total Reservation: {reservation.length}
                         </h4>
 
                     </div>
