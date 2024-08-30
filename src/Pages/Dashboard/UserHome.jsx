@@ -30,12 +30,12 @@ const UserHome = () => {
                                 user?.displayName ? user.displayName : 'Back'
                             }
                         </h2>
-                        <p className="py-6">
+                        <h4 className="my-2">
                             #  Your Total order in Cart: {cart.length}
-                        </p>
-                        <p className="py-6">
+                        </h4>
+                        <h4>
                             #  Your Total Transaction: {payments.length}
-                        </p>
+                        </h4>
 
                     </div>
                 </div>

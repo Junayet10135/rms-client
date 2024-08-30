@@ -11,9 +11,9 @@ const Featured = () => {
                     <img src={featuredImg} alt="" />
                 </div>
                 <div className="md:ml-10">
-                    <h3>Jun 20, 2024</h3>
+                    <h3>AUG 20, 2024</h3>
                     <h4 className="uppercase">Where can i get some?</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate expedita hic dolorem, iusto vel suscipit nam excepturi debitis magnam nostrum! Ut eum dignissimos culpa doloremque eligendi consectetur blanditiis laboriosam fugiat ea quia similique quam nisi reprehenderit numquam magnam nemo vitae cupiditate, atque maiores dicta minus pariatur. Perspiciatis nobis vero quas?</p>
+                    <p> it’s a classic dish reimagined with a modern twist or a seasonal ingredient celebrated in its peak form, our featured food promises to deliver an unforgettable gastronomic experience. Dive into a journey of taste and discover why this dish has been chosen as the highlight of our culinary offerings.</p>
 
                 </div>
             </div>

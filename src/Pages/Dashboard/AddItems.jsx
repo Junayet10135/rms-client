@@ -14,6 +14,7 @@ const AddItems = () => {
     const axiosSecure = useAxiousSecure();
     const onSubmit = async (data) => {
         console.log(data)
+        console.log(image_hosting_api);
         // image upload to imgbb and then get an url
         const imageFile = { image: data.image[0] }
         const res = await axiosPublic.post(image_hosting_api, imageFile, {
@@ -78,6 +79,7 @@ const AddItems = () => {
                                 <option value="dessert">Dessert</option>
                                 <option value="drinks">Drinks</option>
                                 <option value="popular">popular</option>
+                                <option value="offered">offered</option>
                             </select>
                         </div>
 

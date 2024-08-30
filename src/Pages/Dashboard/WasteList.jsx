@@ -25,7 +25,7 @@ const WasteList = () => {
                                 <th>
                                     #
                                 </th>
-                                <th>Image</th>
+
                                 <th>Name</th>
                                 <th>Quantity</th>
                                 <th>Details</th>
@@ -38,15 +38,7 @@ const WasteList = () => {
                                     <td>
                                         {index + 1}
                                     </td>
-                                    <td>
-                                        <div className="flex items-center gap-3">
-                                            <div className="avatar">
-                                                <div className="mask mask-squircle w-12 h-12">
-                                                    <img src={waste.image} alt="Avatar Tailwind CSS Component" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
+
                                     <td>
                                         {waste.name}
                                     </td>
